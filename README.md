@@ -18,7 +18,7 @@ Sonarr on TOS 7 through the App Center:
 | | |
 |---|---|
 | Container image | `linuxserver/sonarr:4.0.20.3014-ls4` (Docker Hub, used unmodified) |
-| Open | `http://<NAS-IP>:8017/` (container port 8989) |
+| Open | `http://<NAS-IP>:8021/` (container port 8989) |
 | Runs as | non-root, `user: "1000:1000"` |
 | Persistent data | `/config` → `/Volume1/DockerAppData/sonarrdocker/config`, `/media` → `/Volume1/DockerAppData/sonarrdocker/media`, `/downloads` → `/Volume1/DockerAppData/sonarrdocker/downloads` |
 | Logs | `docker logs sonarrdocker` (stdout/stderr) |
@@ -56,8 +56,8 @@ built from the same sources by `scripts/build-dual.sh`:
 
 | Architecture | Package | Size | SHA-256 |
 |---|---|---|---|
-| x86_64 | `sonarrdocker_x86_64.tar.gz` | 4820 B | `d98364f07e1f189464f69290d4c79de1aecfcc517f927ee22d229eee8aa3bf02` |
-| aarch64 | `sonarrdocker_aarch64.tar.gz` | 4821 B | `6e5446084f3308a0be1c9de019698384092d0170eb147e7855a7f0365c949f34` |
+| x86_64 | `sonarrdocker_x86_64.tar.gz` | 4820 B | `400b14ed67c84a8b2f646d1f11a594bfdb237983dcd2f9376dcfa762935cab66` |
+| aarch64 | `sonarrdocker_aarch64.tar.gz` | 4821 B | `25c14e7f4f15021c868ab185cc1bc07b8c816836ad887013cc4eeae3631a913f` |
 
 The x86_64 package was verified with the full on-device E2E; the aarch64 package
 passes the official `TOSAppSelfTestingTool -c` check and the developer platform's
@@ -67,8 +67,8 @@ automated validation (no ARM host was available for a container E2E).
 
 ```bash
 scripts/build.sh                  # -> out/sonarrdocker.tar.gz + .sha256
-scripts/build.sh 4.0.20-2   # packaging iteration bump
-scripts/build.sh 4.0.20-1 aarch64
+scripts/build.sh 4.0.20-3   # packaging iteration bump
+scripts/build.sh 4.0.20-2 aarch64
 ```
 
 The build stages the four files, substitutes the version/platform placeholders,
@@ -94,12 +94,12 @@ bash test/install-and-verify.sh                  # on-device E2E (needs root)
 ## Store submission checklist
 
 1. Public GitHub repo (code + README only).
-2. Release **tag `v4.0.20-1`**, assets `sonarrdocker.tar.gz` +
+2. Release **tag `v4.0.20-2`**, assets `sonarrdocker.tar.gz` +
    `sonarrdocker.tar.gz.sha256` (Docker asset naming: `<app_id>.tar.gz`, **no
    platform suffix**).
 3. Developer platform → Add Application: ID `sonarrdocker`, package type Docker,
    repository URL, architecture `x86_64`.
-4. Version Management → Add Version `4.0.20-1` → automated validation → review.
+4. Version Management → Add Version `4.0.20-2` → automated validation → review.
 
 ## License / branding
 

@@ -5,11 +5,11 @@
   "repo_name": "sonarr",
   "github_repo": "sonarr",
   "upstream_version": "4.0.20",
-  "version": "4.0.20-1",
+  "version": "4.0.20-2",
   "mode": "plain",
   "icon_slug": "sonarr",
   "container_port": 8989,
-  "host_port": 8017,
+  "host_port": 8021,
   "category": [
     "Audio_Video_Entertainment"
   ],

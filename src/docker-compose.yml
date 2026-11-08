@@ -4,7 +4,7 @@
 # Upstream image : linuxserver/sonarr:4.0.20.3014-ls4 (Docker Hub, used unmodified)
 #                  -> https://github.com/linuxserver/docker-sonarr
 #
-# Ports   : host 8017 -> container 8989. The host port is in the
+# Ports   : host 8021 -> container 8989. The host port is in the
 #           TOS-recommended 8000-19999 range and is not one of the reserved
 #           ports (22/80/443/445/3306/5050/5432/6379/8181/8443).
 # Volumes : all persistent data lives below
@@ -31,7 +31,7 @@ services:
     restart: unless-stopped
     user: "1000:1000"
     ports:
-      - "8017:8989"
+      - "8021:8989"
     environment:
       TZ: "Asia/Shanghai"
       HOME: "/config"
@@ -50,5 +50,5 @@ services:
 # web.port is the published host port above, protocol is http.
 x-app-meta:
   web:
-    port: 8017
+    port: 8021
     protocol: http
