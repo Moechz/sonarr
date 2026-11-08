@@ -1,0 +1,195 @@
+# ===========================================================================
+# Multilingual file for the TOS 7 Docker application "sonarrdocker".
+# File name MUST be: <appid>.lang.  23-language superset (14 required by TOS).
+# The App Center picks the text matching the user's device language;
+# untranslated nodes fall back to English, which the official guide allows.
+# Fields: name (app title), auth (upstream author), descript (up to 512
+# chars), release_note, important (up to 512 chars).
+# Translations come from tosapp.json "translations"; run
+#   tosdocker lang <app>          to re-render this file
+#   tosdocker translate <app>     to see what still needs translating
+# ===========================================================================
+[en-us]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[zh-cn]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr 是电视剧收藏管理工具：监控新剧集、搜索索引器、把资源交给下载客户端，并自动导入和重命名完成的文件。本应用运行 LinuxServer.io 官方镜像并以非 root 用户运行；设置和数据库在应用数据目录，/media 用于媒体库，/downloads 用于下载目录。打开应用后添加索引器、下载客户端和根目录即可。"
+release_note = "1. 首个版本：Sonarr 4.0.20，来自 Docker Hub，以非 root 用户运行；设置与数据库在应用数据目录，/media 与 /downloads 用于媒体库和下载。"
+important    = "需要 DockerEngine。本应用不含索引器和下载客户端，请在设置中添加；根目录填 /media，下载目录填 /downloads。数据在 DockerAppData/sonarrdocker，media/downloads 与其他应用不共享。卸载并删除数据前请备份。页面是局域网明文 HTTP。"
+
+[zh-hk]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr 是電視劇收藏管理工具：監控新劇集、搜尋索引器、把資源交給下載用戶端，並自動匯入和重新命名完成的檔案。本應用執行 LinuxServer.io 官方鏡像並以非 root 使用者執行；設定和資料庫在應用程式資料目錄，/media 用於媒體庫，/downloads 用於下載目錄。開啟應用後新增索引器、下載用戶端和根目錄即可。"
+release_note = "1. 首個版本：Sonarr 4.0.20，來自 Docker Hub，以非 root 使用者執行；設定與資料庫在應用程式資料目錄，/media 與 /downloads 用於媒體庫和下載。"
+important    = "需要 DockerEngine。本應用不含索引器和下載用戶端，請在設定中新增；根目錄填 /media，下載目錄填 /downloads。資料在 DockerAppData/sonarrdocker，media/downloads 與其他應用不共享。解除安裝並刪除資料前請備份。頁面是區域網路明文 HTTP。"
+
+[fr-fr]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[de-de]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[it-it]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[es-es]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[hu-hu]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[ja-jp]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[ko-kr]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[pl-pl]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[ru-ru]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[tr-tr]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[pt-pt]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[ar-sa]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[cs-cz]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[he-il]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[id-id]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[nb-no]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[nl-nl]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[sv-se]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[th-th]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+
+[vi-vn]
+name         = "Sonarr"
+auth         = "linuxserver.io"
+version      = "@@VERSION@@"
+descript     = "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders."
+release_note = "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library."
+important    = "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN."
+

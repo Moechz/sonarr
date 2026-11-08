@@ -1,0 +1,92 @@
+{
+  "app_id": "sonarrdocker",
+  "title": "Sonarr",
+  "image": "linuxserver/sonarr:4.0.20.3014-ls4",
+  "repo_name": "sonarr",
+  "github_repo": "sonarr",
+  "upstream_version": "4.0.20",
+  "version": "4.0.20-1",
+  "mode": "plain",
+  "icon_slug": "sonarr",
+  "container_port": 8989,
+  "host_port": 8017,
+  "category": [
+    "Audio_Video_Entertainment"
+  ],
+  "user": "1000:1000",
+  "volumes": [
+    {
+      "host": "/Volume1/DockerAppData/sonarrdocker/config",
+      "container": "/config"
+    },
+    {
+      "host": "/Volume1/DockerAppData/sonarrdocker/media",
+      "container": "/media"
+    },
+    {
+      "host": "/Volume1/DockerAppData/sonarrdocker/downloads",
+      "container": "/downloads"
+    }
+  ],
+  "env": {
+    "TZ": "Asia/Shanghai",
+    "HOME": "/config"
+  },
+  "healthcheck": [
+    "CMD-SHELL",
+    "curl -s -o /dev/null http://127.0.0.1:8989/ || exit 1"
+  ],
+  "healthcheck_interval": "30s",
+  "healthcheck_timeout": "10s",
+  "healthcheck_retries": 3,
+  "healthcheck_start_period": "45s",
+  "auth": "linuxserver.io",
+  "upstream_url": "https://github.com/linuxserver/docker-sonarr",
+  "upstream_license": "GPL-3.0-only",
+  "license": "GPL-3.0-only",
+  "official": "https://github.com/linuxserver/docker-sonarr",
+  "help": "https://github.com/Moechz/sonarr/issues",
+  "descript": "Sonarr is a TV series collection manager. It watches for new episodes, searches your indexers, sends releases to a download client and imports and renames the finished files. This package runs the official LinuxServer.io Sonarr image as a non-root container; its settings and database live in the application data folder, with /media for the library and /downloads for completed downloads. Open the app to add indexers, a download client and root folders.",
+  "important": "Requires DockerEngine. The app contains no indexer and no download client: add them in Settings, and set a root folder to /media and the download folder to /downloads. Data is in DockerAppData/sonarrdocker; media and downloads stay in the same application folder and are not shared with other apps. Back up the folder before uninstalling with data removal. The page is plain HTTP on the LAN.",
+  "release_note": "1. First release: Sonarr 4.0.20 from Docker Hub, running as a non-root container; settings and database in the application data folder, with /media and /downloads mounted for the library.",
+  "translations": {
+    "zh-cn": {
+      "descript": "Sonarr 是电视剧收藏管理工具：监控新剧集、搜索索引器、把资源交给下载客户端，并自动导入和重命名完成的文件。本应用运行 LinuxServer.io 官方镜像并以非 root 用户运行；设置和数据库在应用数据目录，/media 用于媒体库，/downloads 用于下载目录。打开应用后添加索引器、下载客户端和根目录即可。",
+      "important": "需要 DockerEngine。本应用不含索引器和下载客户端，请在设置中添加；根目录填 /media，下载目录填 /downloads。数据在 DockerAppData/sonarrdocker，media/downloads 与其他应用不共享。卸载并删除数据前请备份。页面是局域网明文 HTTP。",
+      "release_note": "1. 首个版本：Sonarr 4.0.20，来自 Docker Hub，以非 root 用户运行；设置与数据库在应用数据目录，/media 与 /downloads 用于媒体库和下载。"
+    },
+    "zh-hk": {
+      "descript": "Sonarr 是電視劇收藏管理工具：監控新劇集、搜尋索引器、把資源交給下載用戶端，並自動匯入和重新命名完成的檔案。本應用執行 LinuxServer.io 官方鏡像並以非 root 使用者執行；設定和資料庫在應用程式資料目錄，/media 用於媒體庫，/downloads 用於下載目錄。開啟應用後新增索引器、下載用戶端和根目錄即可。",
+      "important": "需要 DockerEngine。本應用不含索引器和下載用戶端，請在設定中新增；根目錄填 /media，下載目錄填 /downloads。資料在 DockerAppData/sonarrdocker，media/downloads 與其他應用不共享。解除安裝並刪除資料前請備份。頁面是區域網路明文 HTTP。",
+      "release_note": "1. 首個版本：Sonarr 4.0.20，來自 Docker Hub，以非 root 使用者執行；設定與資料庫在應用程式資料目錄，/media 與 /downloads 用於媒體庫和下載。"
+    }
+  },
+  "data_notes": "`config` holds the database, settings and logs; `media` is the TV library; `downloads` is where completed downloads land. Back up `config`; the media folders are your own files.",
+  "design_notes": [
+    "**Runs as a non-root container.** Verified on real hardware as uid 1000.",
+    "**Three volumes.** `/config` keeps the database and settings; `/media` and `/downloads` give the app a library and a download folder inside its own application data directory.",
+    "**Health check** probes the web UI on container port 8989.",
+    "**Fixed image tag, never `:latest`**, Docker Hub only, no `privileged`, no `network_mode: host`, no Docker socket, no `cap_add`."
+  ],
+  "limitations": [
+    "No download client and no indexer are included; add them in Settings.",
+    "`/media` and `/downloads` belong to this app only. They are not shared with the Deluge, Radarr or Lidarr packages - each TOS Docker app has its own data folder.",
+    "The page is plain HTTP on the LAN; use a TLS reverse proxy before exposing it to the internet.",
+    "Docker applications cannot be upgraded in place in the App Center: updating means uninstalling and reinstalling, which keeps the data folder."
+  ],
+  "runtime_files": [
+    {
+      "path": "config/sonarr.db",
+      "purpose": "series, quality profiles, indexers and download-client settings (SQLite)",
+      "created": "first start",
+      "growth": "grows with the library",
+      "lifecycle": "never overwritten; back it up"
+    }
+  ],
+  "platform": "x86_64",
+  "publisher": "Moechz",
+  "compose_project": "sonarrdocker",
+  "release_tag_prefix": "v",
+  "docker_socket": false,
+  "group_add": []
+}
