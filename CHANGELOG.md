@@ -2,7 +2,7 @@
 
 All notable user-visible changes to the Sonarr TOS application package.
 
-## 4.0.20.3014-1 — 2026-11-08
+## 4.0.20-1 — 2026-11-08
 
 ### Added
 - First release. Sonarr (`linuxserver/sonarr:4.0.20.3014-ls4`, Docker Hub official image, unmodified)
